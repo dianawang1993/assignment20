@@ -44,12 +44,12 @@ contract JointSavings {
         /*
         Define a `require` statement that checks if the `recipient` is equal to either `accountOne` or `accountTwo`. The `requiere` statement returns the text `"You don't own this account!"` if it does not.
         */
-        require(recipient == accountOne || recipient == accountTwo. "you don't own this account!");
+        require(recipient == accountOne || recipient == accountTwo, "You don't own this account!");
 
         /*
         Define a `require` statement that checks if the `balance` is sufficient to accomplish the withdraw operation. If there are insufficient funds, the text `Insufficient funds!` is returned.
         */
-        require(contactBalance > amount, "insufficient fund!");
+        require(contractBalance > amount, "insufficient fund!");
 
         /*
         Add and `if` statement to check if the `lastToWithdraw` is not equal to (`!=`) to `recipient` If `lastToWithdraw` is not equal, then set it to the current value of `recipient`.
@@ -83,8 +83,8 @@ contract JointSavings {
     function setAccounts(address payable account1, address payable account2) public{
 
         // Set the values of `accountOne` and `accountTwo` to `account1` and `account2` respectively.
-        accountOne=account1;
-        accountTwo=account2;
+        accountOne= account1;
+        accountTwo= account2;
     }
 
     /*
